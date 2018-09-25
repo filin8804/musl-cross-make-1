@@ -1,0 +1,18 @@
+#!/bin/sh
+
+LIST=$(dirname $(which ${0}))/triples.txt
+LOGS=$(dirname $(which ${0}))/../logs
+BINS=$(dirname $(which ${0}))/../output
+
+mkdir -p ${LOGS} ${BINS}
+for t in $(cat ${LIST} | grep -v "#"); do
+    [ -d ${BINS}/${t} ] || make install \
+        TARGET=${t} \
+        OUTPUT=${BINS}/${t} \
+        -j$(nproc) 2>&1 | tee ${LOGS}/${t}.log
+done;
+
+cd ${BINS}
+for t in $(ls -A); do
+    tar pczf ${t}.tgz ${t};
+done
