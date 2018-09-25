@@ -1,4 +1,3 @@
-
 SOURCES = sources
 
 CONFIG_SUB_REV = 3d5db9ebe860
@@ -23,7 +22,7 @@ MUSL_REPO = git://git.musl-libc.org/musl
 
 LINUX_SITE = https://cdn.kernel.org/pub/linux/kernel
 
-DL_CMD = wget -c -O
+DL_CMD = curl -so
 
 HOST = $(if $(NATIVE),$(TARGET))
 BUILD_DIR = build/$(if $(HOST),$(HOST),local)/$(TARGET)
@@ -91,8 +90,8 @@ endif
 
 musl-git-%:
 	rm -rf $@.tmp
-	git clone -b $(patsubst musl-git-%,%,$@) $(MUSL_REPO) $@.tmp
-	cd $@.tmp && git fsck
+	git clone $(MUSL_REPO) $@.tmp
+	cd $@.tmp && git reset --hard $(patsubst musl-git-%,%,$@) && git fsck
 	mv $@.tmp $@
 
 %: $(SOURCES)/%.tar.gz | $(SOURCES)/config.sub
