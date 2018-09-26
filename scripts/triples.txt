@@ -1,3 +1,5 @@
+# Comment any out that you do not wish to build.
+
 aarch64-linux-musleabi
 armv5l-linux-musleabihf
 armv7l-linux-musleabihf
@@ -5,8 +7,8 @@ armv7m-linux-musleabi
 armv7r-linux-musleabihf
 i486-linux-musl
 i686-linux-musl
-#m68k-linux-musl
-#microblaze-linux-musl
+m68k-linux-musl
+microblaze-linux-musl
 mips-linux-musl
 mips64-linux-musl
 mipsel-linux-musl

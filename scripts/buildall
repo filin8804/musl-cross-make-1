@@ -6,13 +6,23 @@ BINS=$(dirname $(which ${0}))/../output
 
 mkdir -p ${LOGS} ${BINS}
 for t in $(cat ${LIST} | grep -v "#"); do
-    [ -d ${BINS}/${t} ] || make install \
+    case ${t} in
+        *microblaze*)
+            # ICE in GCC; temporarily disable gfortran support.
+            # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87438
+            OVER="GCC_CONFIG=\"--enable-languages=c,c++\""
+            ;;
+        *)
+            OVER=""
+            ;;
+    esac
+    [ -d ${BINS}/${t} ] || make ${OVER} install \
         TARGET=${t} \
         OUTPUT=${BINS}/${t} \
         -j$(nproc) 2>&1 | tee ${LOGS}/${t}.log
 done;
 
 cd ${BINS}
-for t in $(ls -A); do
-    tar pczf ${t}.tgz ${t};
+for t in $(find . -mindepth 1 -maxdepth 1 -type d); do
+    [ -e ${t}.tgz ] || tar pczf ${t}.tgz ${t};
 done
