@@ -1,6 +1,7 @@
 # Comment any out that you do not wish to build.
 
 aarch64-linux-musleabi
+aarch64_be-linux-musl
 armv5l-linux-musleabihf
 armv7l-linux-musleabihf
 armv7m-linux-musleabi
@@ -11,6 +12,7 @@ m68k-linux-musl
 microblaze-linux-musl
 mips-linux-musl
 mips64-linux-musl
+mips64el-linux-musl
 mipsel-linux-musl
 powerpc-linux-musl
 powerpc64-linux-musl
@@ -18,5 +20,6 @@ powerpc64le-linux-musl
 s390x-linux-musl
 sh2eb-linux-muslfdpic
 sh4-linux-musl
+sh4eb-linux-musl
 x86_64-linux-musl
 x86_64-linux-muslx32
