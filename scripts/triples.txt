@@ -17,6 +17,7 @@ mipsel-linux-musl
 powerpc-linux-musl
 powerpc64-linux-musl
 powerpc64le-linux-musl
+powerpcle-linux-musl
 s390x-linux-musl
 sh2eb-linux-muslfdpic
 sh4-linux-musl
