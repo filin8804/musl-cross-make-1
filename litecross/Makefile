@@ -23,6 +23,12 @@ ifneq ($(filter x86_64%x32,$(TARGET)),)
 GCC_CONFIG_FOR_TARGET += --with-abi=x32
 endif
 
+ifneq ($(findstring microblaze,$(TARGET)),)
+# ICE in GCC; temporarily disable gfortran support.
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87438
+GCC_CONFIG_FOR_TARGET += --enable-languages=c,c++
+endif
+
 ifneq ($(findstring powerpc64,$(TARGET)),)
 GCC_CONFIG_FOR_TARGET += --with-abi=elfv2
 endif
@@ -70,7 +76,7 @@ FULL_BINUTILS_CONFIG = \
 	--libdir=/lib --disable-multilib \
 	--with-sysroot=$(SYSROOT)
 
-FULL_GCC_CONFIG = --enable-languages=c,c++ \
+FULL_GCC_CONFIG = --enable-languages=c,c++,fortran \
 	$(GCC_CONFIG_FOR_TARGET) \
 	$(COMMON_CONFIG) $(GCC_CONFIG) $(TOOLCHAIN_CONFIG) \
 	--disable-werror \
@@ -82,7 +88,10 @@ FULL_GCC_CONFIG = --enable-languages=c,c++ \
 	--disable-gnu-indirect-function \
 	--disable-libmpx \
 	--enable-deterministic-archives \
-	--enable-libstdcxx-time
+	--enable-libstdcxx-time \
+	--disable-libquadmath --disable-libquadmath-support \
+	--disable-decimal-float \
+        $(OVERRIDE)
 
 FULL_MUSL_CONFIG = $(MUSL_CONFIG) \
 	--prefix= --host=$(TARGET)

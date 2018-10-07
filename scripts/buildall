@@ -8,30 +8,15 @@ CSUF=cross
 NSUF=native
 
 KALE="${PATH}"
-OVER=""
-
-optics()
-{
-    case ${1} in
-        *microblaze*)
-            # ICE in GCC; temporarily disable gfortran support.
-            # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87438
-            OVER="GCC_CONFIG=\"--enable-languages=c,c++\""
-            ;;
-        *)
-            OVER=""
-            ;;
-    esac
-}
 
 mkdir -p ${LOGS} ${BINS}
 for t in $(cat ${LIST} | grep -v "#"); do
-    [ -d ${BINS}/${t}-${CSUF} ] || make ${OVER} install \
+    [ -d ${BINS}/${t}-${CSUF} ] || make install \
         TARGET=${t} OUTPUT=${BINS}/${t}-${CSUF} \
         -j$(nproc) 2>&1 | tee ${LOGS}/${t}-${CSUF}.log
     if [ -d ${BINS}/${t}-${CSUF} ]; then
         export PATH="${KALE}:${BINS}/${t}-${CSUF}/bin"
-        [ -d ${BINS}/${t}-${NSUF} ] || make ${OVER} install NATIVE=1 \
+        [ -d ${BINS}/${t}-${NSUF} ] || make install NATIVE=1 \
             TARGET=${t} CROSS_COMPILE=${t}- OUTPUT=${BINS}/${t}-${NSUF} \
             -j$(nproc) 2>&1 | tee ${LOGS}/${t}-${NSUF}.log
         export PATH="${KALE}"
