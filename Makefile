@@ -92,6 +92,7 @@ musl-git-%:
 	rm -rf $@.tmp
 	git clone $(MUSL_REPO) $@.tmp
 	cd $@.tmp && git reset --hard $(patsubst musl-git-%,%,$@) && git fsck
+	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp && patch -p1 )
 	mv $@.tmp $@
 
 %: $(SOURCES)/%.tar.gz | $(SOURCES)/config.sub
