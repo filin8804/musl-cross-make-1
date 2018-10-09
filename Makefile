@@ -19,6 +19,7 @@ ISL_SITE = http://isl.gforge.inria.fr/
 
 MUSL_SITE = https://www.musl-libc.org/releases
 MUSL_REPO = git://git.musl-libc.org/musl
+MUSL_RISC = https://github.com/riscv/riscv-musl
 
 LINUX_SITE = https://cdn.kernel.org/pub/linux/kernel
 
@@ -92,6 +93,13 @@ musl-git-%:
 	rm -rf $@.tmp
 	git clone $(MUSL_REPO) $@.tmp
 	cd $@.tmp && git reset --hard $(patsubst musl-git-%,%,$@) && git fsck
+	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp && patch -p1 )
+	mv $@.tmp $@
+
+musl-riscv-%:
+	rm -rf $@.tmp
+	git clone $(MUSL_RISC) $@.tmp
+	cd $@.tmp && git reset --hard $(patsubst musl-riscv-%,%,$@) && git fsck
 	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp && patch -p1 )
 	mv $@.tmp $@
 
