@@ -25,5 +25,6 @@ done;
 
 cd ${BINS}
 for t in $(find . -mindepth 1 -maxdepth 1 -type d); do
+    [ -h ${t}/usr ] || cd ${t} && ln -s . usr && cd ${BINS}
     [ -e ${t}.tgz ] || tar pczf ${t}.tgz ${t};
 done
