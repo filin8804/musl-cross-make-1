@@ -1,7 +1,7 @@
 From be8a252e184c292909ae91a41f12141fc79a2d67 Mon Sep 17 00:00:00 2001
 From: Nick Clifton <nickc@redhat.com>
 Date: Wed, 18 Jul 2018 09:05:35 +0100
-Subject: [PATCH 001/123] Set the development flag back to true.
+Subject: [PATCH 001/128] Set the development flag back to true.
 
 	* development.sh: Set to true.
 ---
@@ -44,7 +44,7 @@ index 918150f30b..27a7150e6d 100644
 From 01683b308a016c49418aee27241389bd2560e0f1 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Wed, 18 Jul 2018 12:34:44 -0700
-Subject: [PATCH 002/123] x86: Split vcvtps2{,u}qq and vcvttps2{,u}qq
+Subject: [PATCH 002/128] x86: Split vcvtps2{,u}qq and vcvttps2{,u}qq
 
 After
 
@@ -395,7 +395,7 @@ index d513275deb..5c37eea6d7 100644
 From 96136f6b6b5ac9984db71336f690eb7f62bf7f8f Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 19 Jul 2018 00:02:23 +0000
-Subject: [PATCH 003/123] Automatic date update in version.in
+Subject: [PATCH 003/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -421,7 +421,7 @@ index 222d2e62c3..b9c26cee51 100644
 From a1ae592f85e64d7b77f6722fec074f73a7437f45 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 20 Jul 2018 00:01:42 +0000
-Subject: [PATCH 004/123] Automatic date update in version.in
+Subject: [PATCH 004/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -447,7 +447,7 @@ index b9c26cee51..feb8373ae6 100644
 From 2df2aaa381c89217d909753a180ba903ceaa7aad Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 21 Jul 2018 00:02:01 +0000
-Subject: [PATCH 005/123] Automatic date update in version.in
+Subject: [PATCH 005/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -473,7 +473,7 @@ index feb8373ae6..0cea707274 100644
 From 59ac04da2a8ebf6a7f7549e10e5e620b59c2afdf Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 22 Jul 2018 00:02:13 +0000
-Subject: [PATCH 006/123] Automatic date update in version.in
+Subject: [PATCH 006/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -499,7 +499,7 @@ index 0cea707274..5307213149 100644
 From a88f3030ce1f5b08845864c30337d33d06c30fcb Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 23 Jul 2018 00:02:19 +0000
-Subject: [PATCH 007/123] Automatic date update in version.in
+Subject: [PATCH 007/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -525,7 +525,7 @@ index 5307213149..0a943bd6ae 100644
 From 6737a6b34f4823deb7142f27b4074831a37ac1e1 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Fri, 20 Jul 2018 09:18:47 -0700
-Subject: [PATCH 008/123] x86: Add a GNU_PROPERTY_X86_ISA_1_USED note if needed
+Subject: [PATCH 008/128] x86: Add a GNU_PROPERTY_X86_ISA_1_USED note if needed
 
 When -z separate-code, which is enabled by default for Linux/x86, is
 used to create executable, ld won't place any data in the code-only
@@ -1093,7 +1093,7 @@ index cfbefe9028..1095091882 100644
 From 00062175197917a4212a7fd0ecb0e1f85a5c5938 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 24 Jul 2018 00:01:45 +0000
-Subject: [PATCH 009/123] Automatic date update in version.in
+Subject: [PATCH 009/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1119,7 +1119,7 @@ index 0a943bd6ae..ffe864301e 100644
 From 29153520a85046471f8e75453c10a93c8ad535a4 Mon Sep 17 00:00:00 2001
 From: Andreas Krebbel <krebbel@linux.ibm.com>
 Date: Thu, 19 Jul 2018 10:00:51 +0200
-Subject: [PATCH 010/123] S/390: Set the htm flag on PPA
+Subject: [PATCH 010/128] S/390: Set the htm flag on PPA
 
 The PPA instruction will be emitted by GCC transactional execution
 builtins so it needs to be accepted with just -mhtm and without
@@ -1157,7 +1157,7 @@ index ef75e38e7e..d8a9cce1e2 100644
 From 13e8b41009a09f8d425eb676cfcfef8baa703b34 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 25 Jul 2018 00:01:45 +0000
-Subject: [PATCH 011/123] Automatic date update in version.in
+Subject: [PATCH 011/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1183,7 +1183,7 @@ index ffe864301e..3ba6149ce7 100644
 From 87b30c0845ceb4a6634f8e0e2580fa7ae3992899 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 26 Jul 2018 00:02:03 +0000
-Subject: [PATCH 012/123] Automatic date update in version.in
+Subject: [PATCH 012/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1209,7 +1209,7 @@ index 3ba6149ce7..d80e719e08 100644
 From 215e1e3e3d43ff0c1a68aa57c74156b432d5481e Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 27 Jul 2018 00:02:08 +0000
-Subject: [PATCH 013/123] Automatic date update in version.in
+Subject: [PATCH 013/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1235,7 +1235,7 @@ index d80e719e08..e95c032deb 100644
 From 1ddf09c06c28476871bb914119261ed5ade7e9b2 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 28 Jul 2018 00:01:52 +0000
-Subject: [PATCH 014/123] Automatic date update in version.in
+Subject: [PATCH 014/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1261,7 +1261,7 @@ index e95c032deb..a3b7acddd1 100644
 From 4f166da589416717981c2c7a91983467055cab0c Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 29 Jul 2018 00:02:34 +0000
-Subject: [PATCH 015/123] Automatic date update in version.in
+Subject: [PATCH 015/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1287,7 +1287,7 @@ index a3b7acddd1..ea135a0f4f 100644
 From 4f36bed254b54d3ad0f4831d2a523fafc8e72927 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 30 Jul 2018 00:01:37 +0000
-Subject: [PATCH 016/123] Automatic date update in version.in
+Subject: [PATCH 016/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1313,7 +1313,7 @@ index ea135a0f4f..8c05578cd3 100644
 From 254ade2586dffb800a1a08726080ad6e05076ebb Mon Sep 17 00:00:00 2001
 From: John David Anglin <danglin@gcc.gnu.org>
 Date: Mon, 30 Jul 2018 10:52:34 -0400
-Subject: [PATCH 017/123] Fix unwind offset for call_info->start_symbol.
+Subject: [PATCH 017/128] Fix unwind offset for call_info->start_symbol.
 
 	* config/tc-hppa.c: Include "struc-symbol.h".
 	(pa_build_unwind_subspace): Use call_info->start_symbol->sy_frag
@@ -1366,7 +1366,7 @@ index e69fdb2b39..ccae68cb40 100644
 From 750af8ddb0f1bb4f72127d00f5ad4dd2498861fa Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 31 Jul 2018 00:02:23 +0000
-Subject: [PATCH 018/123] Automatic date update in version.in
+Subject: [PATCH 018/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1392,7 +1392,7 @@ index 8c05578cd3..df4a978810 100644
 From 2069ccaf8dc28ea699bd901fdd35d90613e4402a Mon Sep 17 00:00:00 2001
 From: Jan Beulich <jbeulich@novell.com>
 Date: Tue, 31 Jul 2018 11:04:34 +0200
-Subject: [PATCH 019/123] x86: don't mistakenly scale non-8-bit displacements
+Subject: [PATCH 019/128] x86: don't mistakenly scale non-8-bit displacements
 
 PR gas/23465
 
@@ -1535,7 +1535,7 @@ index 9cc927a962..88d0121eb2 100644
 From 5e2d6eadb26508ada9bebefc48a3039bf9bf5bfe Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 1 Aug 2018 00:01:56 +0000
-Subject: [PATCH 020/123] Automatic date update in version.in
+Subject: [PATCH 020/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1561,7 +1561,7 @@ index df4a978810..4e2197d6a8 100644
 From feaed904944b4c07c1335b81f0fc27b5988e33c8 Mon Sep 17 00:00:00 2001
 From: Andre Simoes Dias Vieira <andre.simoesdiasvieira@arm.com>
 Date: Thu, 19 Jul 2018 16:18:28 +0100
-Subject: [PATCH 021/123] [PATCH, LD, AArch64] Fix ifunc testisms
+Subject: [PATCH 021/128] [PATCH, LD, AArch64] Fix ifunc testisms
 
 This patch fixes some ifunc testisms after H.J. Lu's patch to enable the
 use of IFUNC pointers in position dependent code for binutils. See PR
@@ -1615,7 +1615,7 @@ index 612d91402f..86892b96b5 100644
 From 60b3b24ca106f01361f2d53aeaea747927df8675 Mon Sep 17 00:00:00 2001
 From: Roland McGrath <mcgrathr@google.com>
 Date: Wed, 1 Aug 2018 13:36:51 -0700
-Subject: [PATCH 022/123] Fix spurious check-ld failures on aarch64-elf
+Subject: [PATCH 022/128] Fix spurious check-ld failures on aarch64-elf
 
 ld/
 	* testsuite/ld-aarch64/ifunc-1-local.d: Adjust regexps to match
@@ -1760,7 +1760,7 @@ index a01a75c904..4919d96892 100644
 From 6d86d6d375a5185ccd89e48f23d2729e424c6c05 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 2 Aug 2018 00:01:29 +0000
-Subject: [PATCH 023/123] Automatic date update in version.in
+Subject: [PATCH 023/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1786,7 +1786,7 @@ index 4e2197d6a8..c3406be1d6 100644
 From 75b342fea3bc84d11346dc940830abf7724f75ef Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 3 Aug 2018 00:02:01 +0000
-Subject: [PATCH 024/123] Automatic date update in version.in
+Subject: [PATCH 024/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1812,7 +1812,7 @@ index c3406be1d6..306e72735d 100644
 From bde7d74d9cced011afdc715d4b0f3f0b0297adef Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 4 Aug 2018 00:01:27 +0000
-Subject: [PATCH 025/123] Automatic date update in version.in
+Subject: [PATCH 025/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1838,7 +1838,7 @@ index 306e72735d..b6d0c66303 100644
 From 41e73f314477d89a9d2fe6047f2fde0f432f4569 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 5 Aug 2018 00:02:13 +0000
-Subject: [PATCH 026/123] Automatic date update in version.in
+Subject: [PATCH 026/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1864,7 +1864,7 @@ index b6d0c66303..03e75f0381 100644
 From 29d5746fed0c1e9a77371311e6555b0abd5b56b2 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 6 Aug 2018 00:01:20 +0000
-Subject: [PATCH 027/123] Automatic date update in version.in
+Subject: [PATCH 027/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -1890,7 +1890,7 @@ index 03e75f0381..4010ee0922 100644
 From dbf924a63a80f7044f491a09c0df6fe51a07e05e Mon Sep 17 00:00:00 2001
 From: Cary Coutant <ccoutant@gmail.com>
 Date: Mon, 6 Aug 2018 13:36:42 -0700
-Subject: [PATCH 028/123] Fix type checking errors.
+Subject: [PATCH 028/128] Fix type checking errors.
 
 gold/
 	* target.h (Sized_target::record_gnu_property): Change first two
@@ -1960,7 +1960,7 @@ index 27f273d64b..9d742f6f13 100644
 From b7991db94c9dabb42a7a0fc5b0a0fb1997d85586 Mon Sep 17 00:00:00 2001
 From: Cary Coutant <ccoutant@gmail.com>
 Date: Mon, 6 Aug 2018 14:08:48 -0700
-Subject: [PATCH 029/123] Add --warn-drop-version option; by default, do not
+Subject: [PATCH 029/128] Add --warn-drop-version option; by default, do not
  warn when discarding version info.
 
 gold/
@@ -2031,7 +2031,7 @@ index aa7644156f..759e0d0222 100644
 From 3499ff77ef0cc96a9091dfa6261df7b8390f3703 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 7 Aug 2018 00:01:55 +0000
-Subject: [PATCH 030/123] Automatic date update in version.in
+Subject: [PATCH 030/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -2057,7 +2057,7 @@ index 4010ee0922..d85b58ab61 100644
 From 1d8f56a971396b403f2f4f42f94d4d236252c479 Mon Sep 17 00:00:00 2001
 From: Nick Clifton <nickc@redhat.com>
 Date: Tue, 7 Aug 2018 08:17:11 +0100
-Subject: [PATCH 031/123] Updated Bulgarian translation for the ld/ directory
+Subject: [PATCH 031/128] Updated Bulgarian translation for the ld/ directory
 
 ---
  ld/ChangeLog |   4 ++
@@ -2529,7 +2529,7 @@ index 5e8e818818..bf6ecd9b61 100644
 From 079a6882b523cfd10709c6f2da89584698abd686 Mon Sep 17 00:00:00 2001
 From: Alan Modra <amodra@gmail.com>
 Date: Wed, 1 Aug 2018 12:14:22 +0930
-Subject: [PATCH 032/123] PowerPC64 __tls_get_addr_opt stub .eh_frame fix
+Subject: [PATCH 032/128] PowerPC64 __tls_get_addr_opt stub .eh_frame fix
 
 This patch sets stub_offset in ppc_size_one_stub rather than in
 ppc_build_one_stub.  That allows the plt stub alignment to be done in
@@ -3006,7 +3006,7 @@ index af8cb76d1c..f0453610e0 100644
 From 95fbde6791dd4b7821a40cbbc985a257e4819fdb Mon Sep 17 00:00:00 2001
 From: Alan Modra <amodra@gmail.com>
 Date: Wed, 1 Aug 2018 18:59:03 +0930
-Subject: [PATCH 033/123] Re: PowerPC64 __tls_get_addr_opt stub .eh_frame fix
+Subject: [PATCH 033/128] Re: PowerPC64 __tls_get_addr_opt stub .eh_frame fix
 
 The modified test failed on some powerpc targets due to differences in
 default hash style.  If the default hash style is both, then more
@@ -3058,7 +3058,7 @@ index 3c7b707cd0..de762966e5 100644
 From 4aa5eb02fd8e394e7128a78018b780fb566da81d Mon Sep 17 00:00:00 2001
 From: Alan Modra <amodra@gmail.com>
 Date: Sun, 5 Aug 2018 19:44:03 +0930
-Subject: [PATCH 034/123] __tls_get_addr_opt stubs and tocsave optimization
+Subject: [PATCH 034/128] __tls_get_addr_opt stubs and tocsave optimization
 
 This patch fixes a bug in the handling of the __tls_get_addr_opt
 stub.  Calls via this stub don't have a toc restoring instruction
@@ -3153,7 +3153,7 @@ index d7604d7678..139ed1abcd 100644
 From 0e37f907b02abc23e5aecaa7fbb63a51cfac8a16 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 8 Aug 2018 00:01:49 +0000
-Subject: [PATCH 035/123] Automatic date update in version.in
+Subject: [PATCH 035/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -3179,7 +3179,7 @@ index d85b58ab61..f15c68bc98 100644
 From f63691a7a0ad5b7f706f22a9ad91c71a9e889b96 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 9 Aug 2018 00:01:50 +0000
-Subject: [PATCH 036/123] Automatic date update in version.in
+Subject: [PATCH 036/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -3205,7 +3205,7 @@ index f15c68bc98..d8b4357559 100644
 From d4bc1d3fa656085652b3e900fa4d636fb80441ab Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 10 Aug 2018 00:01:33 +0000
-Subject: [PATCH 037/123] Automatic date update in version.in
+Subject: [PATCH 037/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -3231,7 +3231,7 @@ index d8b4357559..fb6aa4c87c 100644
 From 9b075c7167d68d656c8197b17ccdb4e3c6fbdc5c Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Fri, 3 Aug 2018 15:47:26 -0700
-Subject: [PATCH 038/123] x32: Align the .note.gnu.property section to 4 bytes
+Subject: [PATCH 038/128] x32: Align the .note.gnu.property section to 4 bytes
 
 The .note.gnu.property section should be aligned to 4 bytes for x32.
 
@@ -3280,7 +3280,7 @@ index be8cc9efb1..239cf622ff 100644
 From 381c1eb6ec7bf11e67f30764a0e115e044564db8 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Sun, 5 Aug 2018 10:05:52 -0700
-Subject: [PATCH 039/123] x86: Update assembler tests for non-ELF targets
+Subject: [PATCH 039/128] x86: Update assembler tests for non-ELF targets
 
 evex-no-scale.s has ELF directive:
 
@@ -3353,7 +3353,7 @@ index 88d0121eb2..3987862477 100644
 From d55c3e36094f06bb1fb02f5eac19fdccf1d91f7e Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Wed, 8 Aug 2018 06:09:15 -0700
-Subject: [PATCH 040/123] x86: Properly merge GNU_PROPERTY_X86_ISA_1_USED
+Subject: [PATCH 040/128] x86: Properly merge GNU_PROPERTY_X86_ISA_1_USED
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -3998,7 +3998,7 @@ index 6edb9e86f4..ae21e554ad 100644
 From d6922904447698fa59bc3a7d544b82207a2451b8 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Fri, 10 Aug 2018 10:23:11 -0700
-Subject: [PATCH 041/123] x86: Replace evex-no-scale.s with
+Subject: [PATCH 041/128] x86: Replace evex-no-scale.s with
  evex-no-scale-[32|64].s
 
 .if is_64bit
@@ -4117,7 +4117,7 @@ index ed0f2312af..bc3749cc0c 100644
 From 6ee91b1ef11dde1c34eda579e2aef6d4328b050e Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 11 Aug 2018 00:01:56 +0000
-Subject: [PATCH 042/123] Automatic date update in version.in
+Subject: [PATCH 042/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4143,7 +4143,7 @@ index fb6aa4c87c..61f6d98d29 100644
 From 252bc4d0f7e99842329535df15783b43282c3b20 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 12 Aug 2018 00:02:22 +0000
-Subject: [PATCH 043/123] Automatic date update in version.in
+Subject: [PATCH 043/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4169,7 +4169,7 @@ index 61f6d98d29..f9fbcb621c 100644
 From 28a27bdbb9500797e6767f80c8128b09112aeed5 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Sat, 11 Aug 2018 06:41:33 -0700
-Subject: [PATCH 044/123] x86: Properly add X86_ISA_1_NEEDED property
+Subject: [PATCH 044/128] x86: Properly add X86_ISA_1_NEEDED property
 
 Existing properties may be removed during property merging.  We avoid
 adding X86_ISA_1_NEEDED property only if existing properties won't be
@@ -4339,7 +4339,7 @@ index 36217c6fb4..f6f5a80853 100644
 From a69de9c7cf6b9ce51eab20fc0d6499459a0e2ca8 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Sun, 12 Aug 2018 05:39:00 -0700
-Subject: [PATCH 045/123] ld-x86-64/pr23486b.d: Swap pr23486a.s and pr23486a.s
+Subject: [PATCH 045/128] ld-x86-64/pr23486b.d: Swap pr23486a.s and pr23486a.s
 
 Swap pr23486a.s and pr23486a.s so that pr23486b.d differs from pr23486a.d.
 
@@ -4381,7 +4381,7 @@ index dc2b7bf760..dd0fe88143 100644
 From 68a09b71ce0de564e920d00d8ca4da027b20621a Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 13 Aug 2018 00:02:03 +0000
-Subject: [PATCH 046/123] Automatic date update in version.in
+Subject: [PATCH 046/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4407,7 +4407,7 @@ index f9fbcb621c..fa3714de23 100644
 From 623310489442a9dcf74c90ed210b55a13d20bac8 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 14 Aug 2018 00:01:51 +0000
-Subject: [PATCH 047/123] Automatic date update in version.in
+Subject: [PATCH 047/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4433,7 +4433,7 @@ index fa3714de23..234802c793 100644
 From 7b5eb9b40f6ffd84aea76b9ee5a1f7b314b9685a Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 15 Aug 2018 00:01:39 +0000
-Subject: [PATCH 048/123] Automatic date update in version.in
+Subject: [PATCH 048/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4459,7 +4459,7 @@ index 234802c793..c78ba7e54f 100644
 From 8977539e452afe63a00bc2d37145e238183e7516 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 16 Aug 2018 00:01:40 +0000
-Subject: [PATCH 049/123] Automatic date update in version.in
+Subject: [PATCH 049/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4485,7 +4485,7 @@ index c78ba7e54f..831d1a6912 100644
 From 2fb483d76773fb63c59b5c91eb4c2df6cf8c91e6 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 17 Aug 2018 00:02:03 +0000
-Subject: [PATCH 050/123] Automatic date update in version.in
+Subject: [PATCH 050/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4511,7 +4511,7 @@ index 831d1a6912..e88f7a4108 100644
 From 4568e49ff799192fea4f66063fe13e2b871ec75a Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 18 Aug 2018 00:02:07 +0000
-Subject: [PATCH 051/123] Automatic date update in version.in
+Subject: [PATCH 051/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4537,7 +4537,7 @@ index e88f7a4108..231fec1344 100644
 From 712024137cef8df772695136b4aa618fb601a48f Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 19 Aug 2018 00:02:46 +0000
-Subject: [PATCH 052/123] Automatic date update in version.in
+Subject: [PATCH 052/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4563,7 +4563,7 @@ index 231fec1344..fd77d2e30a 100644
 From 864fdbbd5db39a3f6e19f815e7463c0ecf6f562a Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 20 Aug 2018 00:01:38 +0000
-Subject: [PATCH 053/123] Automatic date update in version.in
+Subject: [PATCH 053/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4589,7 +4589,7 @@ index fd77d2e30a..7449c9994a 100644
 From f0a7fe6ef0094dd6186c0938ef63a91b55b8e987 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 21 Aug 2018 00:02:11 +0000
-Subject: [PATCH 054/123] Automatic date update in version.in
+Subject: [PATCH 054/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4615,7 +4615,7 @@ index 7449c9994a..7e5c2ed74e 100644
 From bcfe08290c5a65d7de6337f4fe228e49fe3d2af8 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 22 Aug 2018 00:01:44 +0000
-Subject: [PATCH 055/123] Automatic date update in version.in
+Subject: [PATCH 055/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4641,7 +4641,7 @@ index 7e5c2ed74e..255534804e 100644
 From ef0d07b94077a8f6a657fb3ef151d8d5861f849b Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 23 Aug 2018 00:02:29 +0000
-Subject: [PATCH 056/123] Automatic date update in version.in
+Subject: [PATCH 056/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4667,7 +4667,7 @@ index 255534804e..c6bfbcc55b 100644
 From d8d43263de12b56812cedee9eff2fed9a3edc48e Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 24 Aug 2018 00:01:32 +0000
-Subject: [PATCH 057/123] Automatic date update in version.in
+Subject: [PATCH 057/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4693,7 +4693,7 @@ index c6bfbcc55b..f11aa2e7fa 100644
 From 6cfa38dcca0ce2acb9775e272569530b6c39fbcc Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 25 Aug 2018 00:01:59 +0000
-Subject: [PATCH 058/123] Automatic date update in version.in
+Subject: [PATCH 058/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4719,7 +4719,7 @@ index f11aa2e7fa..43ab8bb718 100644
 From d137ba507e38bec01b1e27dcd4f83b53085c17e0 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 26 Aug 2018 00:02:26 +0000
-Subject: [PATCH 059/123] Automatic date update in version.in
+Subject: [PATCH 059/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4745,7 +4745,7 @@ index 43ab8bb718..a40a169576 100644
 From ff5495e8ba89b9acded703e4a7eb2d0a3d3fee0c Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 27 Aug 2018 00:02:33 +0000
-Subject: [PATCH 060/123] Automatic date update in version.in
+Subject: [PATCH 060/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4771,7 +4771,7 @@ index a40a169576..a05b0c9a18 100644
 From e51abf7e34db2c429e4533550e16f753292746f0 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 28 Aug 2018 00:02:33 +0000
-Subject: [PATCH 061/123] Automatic date update in version.in
+Subject: [PATCH 061/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4797,7 +4797,7 @@ index a05b0c9a18..41de4baf6c 100644
 From 66e23f5ea5203389341f9cf85b860da9e660a4ac Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 29 Aug 2018 00:02:19 +0000
-Subject: [PATCH 062/123] Automatic date update in version.in
+Subject: [PATCH 062/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4823,7 +4823,7 @@ index 41de4baf6c..c9f63a701f 100644
 From ae297576a15560d81c6580f47f162e16da410df2 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 30 Aug 2018 00:02:22 +0000
-Subject: [PATCH 063/123] Automatic date update in version.in
+Subject: [PATCH 063/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4849,7 +4849,7 @@ index c9f63a701f..5449c2d6c5 100644
 From 58a22630e09a0b8eec19b60085e22d42475155bb Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 31 Aug 2018 00:02:15 +0000
-Subject: [PATCH 064/123] Automatic date update in version.in
+Subject: [PATCH 064/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4875,7 +4875,7 @@ index 5449c2d6c5..1a092616a0 100644
 From c4f85ebae9bf00902ef70e8ff707aa0cf1d4237a Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 1 Sep 2018 00:01:56 +0000
-Subject: [PATCH 065/123] Automatic date update in version.in
+Subject: [PATCH 065/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4901,7 +4901,7 @@ index 1a092616a0..ccbf55edf7 100644
 From 90dd229424d8a0fc4ccd64004c881fd4a0a1a405 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 2 Sep 2018 00:03:05 +0000
-Subject: [PATCH 066/123] Automatic date update in version.in
+Subject: [PATCH 066/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4927,7 +4927,7 @@ index ccbf55edf7..e8d80fc522 100644
 From 9821d7da47e8bd17812b00a7bfc449700917c790 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 3 Sep 2018 00:02:06 +0000
-Subject: [PATCH 067/123] Automatic date update in version.in
+Subject: [PATCH 067/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4953,7 +4953,7 @@ index e8d80fc522..df5013ea6b 100644
 From 7b821e0e36de07f7ab4697385c8ceaee10137511 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 4 Sep 2018 00:02:00 +0000
-Subject: [PATCH 068/123] Automatic date update in version.in
+Subject: [PATCH 068/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -4979,7 +4979,7 @@ index df5013ea6b..7ff99fa0ba 100644
 From a532438b6e5bb9648d59d2751ff200369bfc1507 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 5 Sep 2018 00:01:37 +0000
-Subject: [PATCH 069/123] Automatic date update in version.in
+Subject: [PATCH 069/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5005,7 +5005,7 @@ index 7ff99fa0ba..0c682c9ab8 100644
 From 5f71d8d2da0a0d382352cb10125fb7c984d70997 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 6 Sep 2018 00:02:08 +0000
-Subject: [PATCH 070/123] Automatic date update in version.in
+Subject: [PATCH 070/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5031,7 +5031,7 @@ index 0c682c9ab8..7bb58ad031 100644
 From 012de9d52148f4bc4f74bc1a7c12c128749eefae Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 7 Sep 2018 00:02:27 +0000
-Subject: [PATCH 071/123] Automatic date update in version.in
+Subject: [PATCH 071/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5057,7 +5057,7 @@ index 7bb58ad031..ddbfc9e0af 100644
 From 86382144fa6971480d5ccc70294af8122b06448d Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 8 Sep 2018 00:02:07 +0000
-Subject: [PATCH 072/123] Automatic date update in version.in
+Subject: [PATCH 072/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5083,7 +5083,7 @@ index ddbfc9e0af..468f360570 100644
 From 8c148a60ce4a1b853d3579b2b2006707ef464cb4 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 9 Sep 2018 00:02:41 +0000
-Subject: [PATCH 073/123] Automatic date update in version.in
+Subject: [PATCH 073/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5109,7 +5109,7 @@ index 468f360570..654f4e1a1b 100644
 From 1fabeb5aebff74ee21dc0dfb2df3fb3e1d9ed63c Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 10 Sep 2018 00:02:07 +0000
-Subject: [PATCH 074/123] Automatic date update in version.in
+Subject: [PATCH 074/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5135,7 +5135,7 @@ index 654f4e1a1b..5ed7a34acb 100644
 From 2218c7ae53692fc4685eef8eeef8e7e172f467b0 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 11 Sep 2018 00:02:20 +0000
-Subject: [PATCH 075/123] Automatic date update in version.in
+Subject: [PATCH 075/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5161,7 +5161,7 @@ index 5ed7a34acb..80eeedaf09 100644
 From 07744cbe6e356628794bb1418d2b4ef9cf06aba5 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 12 Sep 2018 00:02:31 +0000
-Subject: [PATCH 076/123] Automatic date update in version.in
+Subject: [PATCH 076/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5187,7 +5187,7 @@ index 80eeedaf09..26e37d5b11 100644
 From 76db6c1ac2cb4102e5551ab822afd84d88bb37aa Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Fri, 10 Aug 2018 12:21:58 -0700
-Subject: [PATCH 077/123] Always clear h->verinfo.verdef when overriding a
+Subject: [PATCH 077/128] Always clear h->verinfo.verdef when overriding a
  dynamic definition
 
 When linker defines a symbol to override a dynamic definition, it should
@@ -5281,7 +5281,7 @@ index b24fb95848..02618bed8f 100644
 From edd27c67f5f4d04331394d295806e697e606bbdb Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Sat, 25 Aug 2018 06:17:52 -0700
-Subject: [PATCH 078/123] elf: Check for corrupt symbol version info
+Subject: [PATCH 078/128] elf: Check for corrupt symbol version info
 
 The BFD linker with PR ld/23499 may generate shared libraries with
 corrupt symbol version info which leads to linker error when the
@@ -5407,7 +5407,7 @@ index 1b50ba7631..f4df697a7d 100644
 From e6dc779fcebb7de4399f6385b16a4277de239f6e Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 13 Sep 2018 00:02:02 +0000
-Subject: [PATCH 079/123] Automatic date update in version.in
+Subject: [PATCH 079/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5433,7 +5433,7 @@ index 26e37d5b11..35b7b8a97c 100644
 From 2599520e3f35f83e7e76fbb833b099c8fe4b28b9 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 14 Sep 2018 00:01:31 +0000
-Subject: [PATCH 080/123] Automatic date update in version.in
+Subject: [PATCH 080/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5459,7 +5459,7 @@ index 35b7b8a97c..fd36fe96c5 100644
 From 441f19bc606683a1e807c8e8e256bae03cbb3a06 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 15 Sep 2018 00:02:36 +0000
-Subject: [PATCH 081/123] Automatic date update in version.in
+Subject: [PATCH 081/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5485,7 +5485,7 @@ index fd36fe96c5..dab8310229 100644
 From f086873e4a0d054963bfcd4db249af1b978a5e83 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 16 Sep 2018 00:02:30 +0000
-Subject: [PATCH 082/123] Automatic date update in version.in
+Subject: [PATCH 082/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5511,7 +5511,7 @@ index dab8310229..820b7f546e 100644
 From 067f901e5db60b47de07f36772d066f539e030a4 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 17 Sep 2018 00:02:09 +0000
-Subject: [PATCH 083/123] Automatic date update in version.in
+Subject: [PATCH 083/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5537,7 +5537,7 @@ index 820b7f546e..3a34da154d 100644
 From bdfdf1717407e4857fe671f902434273a71b4fe1 Mon Sep 17 00:00:00 2001
 From: Robert Yang <liezhi.yang@windriver.com>
 Date: Mon, 17 Sep 2018 16:26:58 +0100
-Subject: [PATCH 084/123] Improve the code in the assembler to detect and
+Subject: [PATCH 084/128] Improve the code in the assembler to detect and
  reject a duplicate input and output file.
 
 	* as.c (main): Improve check for input file matching output file.
@@ -5607,7 +5607,7 @@ index 02c7d2970b..919c24a24a 100644
 From b9b6d6106674f56116f412c819fb7f649465d012 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 18 Sep 2018 00:01:44 +0000
-Subject: [PATCH 085/123] Automatic date update in version.in
+Subject: [PATCH 085/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5633,7 +5633,7 @@ index 3a34da154d..4fc2ecbcc7 100644
 From dd17be4dffc2707659194ecfd2e686a5d6b52ace Mon Sep 17 00:00:00 2001
 From: Tamar Christina <tamar.christina@arm.com>
 Date: Tue, 18 Sep 2018 14:36:37 +0100
-Subject: [PATCH 086/123] Fix Aarch64 bug in warning filtering.
+Subject: [PATCH 086/128] Fix Aarch64 bug in warning filtering.
 
 This fixes a small bug with the warning filtering code, which when a line has
 generated a warning and a template decode error (due to the way templates are
@@ -5690,7 +5690,7 @@ index 31985963e3..c77de21d19 100644
 From 5fff8868ce2934dd446d951b4ca4e6b6f20f1acd Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 19 Sep 2018 00:02:12 +0000
-Subject: [PATCH 087/123] Automatic date update in version.in
+Subject: [PATCH 087/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5716,7 +5716,7 @@ index 4fc2ecbcc7..bb53d61a3c 100644
 From 05c53500724169b73325dbc4595cd9a487db0267 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 20 Sep 2018 00:02:44 +0000
-Subject: [PATCH 088/123] Automatic date update in version.in
+Subject: [PATCH 088/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5742,7 +5742,7 @@ index bb53d61a3c..e5c28e8333 100644
 From c018d03e9d410c2559735bc0e13ba3079cc1bc3f Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 21 Sep 2018 00:02:21 +0000
-Subject: [PATCH 089/123] Automatic date update in version.in
+Subject: [PATCH 089/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5768,7 +5768,7 @@ index e5c28e8333..e99cffde77 100644
 From 4ee8b44178c183bd6b6e29d587f7ba7cc93c9ae7 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 22 Sep 2018 00:01:32 +0000
-Subject: [PATCH 090/123] Automatic date update in version.in
+Subject: [PATCH 090/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5794,7 +5794,7 @@ index e99cffde77..786b2bd5cf 100644
 From a3844e7e9a361b8ac1fdc3ecbb564b9c0356a7ba Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 23 Sep 2018 00:02:31 +0000
-Subject: [PATCH 091/123] Automatic date update in version.in
+Subject: [PATCH 091/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5820,7 +5820,7 @@ index 786b2bd5cf..73537d56ec 100644
 From 4faa747032343439063ae5e224c84e2e5120dd75 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 24 Sep 2018 00:01:53 +0000
-Subject: [PATCH 092/123] Automatic date update in version.in
+Subject: [PATCH 092/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5846,7 +5846,7 @@ index 73537d56ec..198569be04 100644
 From a24953ddcd873d5ca98ec7d65869e34a11cf8a98 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 25 Sep 2018 00:02:03 +0000
-Subject: [PATCH 093/123] Automatic date update in version.in
+Subject: [PATCH 093/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5872,7 +5872,7 @@ index 198569be04..d71463a72f 100644
 From 2b61227e3547a342979643756da1ec1f2d753883 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 26 Sep 2018 00:02:19 +0000
-Subject: [PATCH 094/123] Automatic date update in version.in
+Subject: [PATCH 094/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5898,7 +5898,7 @@ index d71463a72f..b50699cae4 100644
 From c0bd1f9c16d2f860bf9c04f54b3f38783192d9b1 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 27 Sep 2018 00:01:55 +0000
-Subject: [PATCH 095/123] Automatic date update in version.in
+Subject: [PATCH 095/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5924,7 +5924,7 @@ index b50699cae4..66b4740f4b 100644
 From 05f5e903b449f216250c1fe3585ca0cbdfefacc7 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 28 Sep 2018 00:02:02 +0000
-Subject: [PATCH 096/123] Automatic date update in version.in
+Subject: [PATCH 096/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5950,7 +5950,7 @@ index 66b4740f4b..d68ce47102 100644
 From 0430705f466f40ba93f4b27b61963aa3d3a1e300 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 29 Sep 2018 00:02:19 +0000
-Subject: [PATCH 097/123] Automatic date update in version.in
+Subject: [PATCH 097/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -5976,7 +5976,7 @@ index d68ce47102..67f59c7337 100644
 From ddd877c1e997b77d273369b837f26ca88e1c37a0 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 30 Sep 2018 00:02:41 +0000
-Subject: [PATCH 098/123] Automatic date update in version.in
+Subject: [PATCH 098/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6002,7 +6002,7 @@ index 67f59c7337..2e8c5e7f9a 100644
 From 62ebc4006386d1961cb99da936a64162cedf6121 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 1 Oct 2018 00:02:16 +0000
-Subject: [PATCH 099/123] Automatic date update in version.in
+Subject: [PATCH 099/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6028,7 +6028,7 @@ index 2e8c5e7f9a..ddc0dc2e1c 100644
 From ff89b1aad4fdcb734f936e350c5dcb7c54b93547 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 2 Oct 2018 00:02:19 +0000
-Subject: [PATCH 100/123] Automatic date update in version.in
+Subject: [PATCH 100/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6054,7 +6054,7 @@ index ddc0dc2e1c..7fcf6cd254 100644
 From 2ede2c0bcad84775a8a00e1c99c8152460f757e7 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 3 Oct 2018 00:01:53 +0000
-Subject: [PATCH 101/123] Automatic date update in version.in
+Subject: [PATCH 101/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6080,7 +6080,7 @@ index 7fcf6cd254..1f00984497 100644
 From 7f3d9730857550bbedaa882040406766e7e548d3 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 4 Oct 2018 00:01:52 +0000
-Subject: [PATCH 102/123] Automatic date update in version.in
+Subject: [PATCH 102/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6106,7 +6106,7 @@ index 1f00984497..ff21568f3d 100644
 From 006f62dac0452bf612c37a8e09006fbf80335178 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 5 Oct 2018 00:02:14 +0000
-Subject: [PATCH 103/123] Automatic date update in version.in
+Subject: [PATCH 103/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6132,7 +6132,7 @@ index ff21568f3d..2356a32ff0 100644
 From 1ae25bf8c2b5164e8a7e581cc4a72d692f4fd85a Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hjl.tools@gmail.com>
 Date: Fri, 5 Oct 2018 11:56:42 -0700
-Subject: [PATCH 104/123] x86: Add Intel ENCLV to assembler and disassembler
+Subject: [PATCH 104/128] x86: Add Intel ENCLV to assembler and disassembler
 
 gas/
 
@@ -6284,7 +6284,7 @@ index 5c37eea6d7..42ac313eca 100644
 From fe5e34a1575b2422ab0fa00a73105aaf4877fd14 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 6 Oct 2018 00:01:51 +0000
-Subject: [PATCH 105/123] Automatic date update in version.in
+Subject: [PATCH 105/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6310,7 +6310,7 @@ index 2356a32ff0..6f23cf002e 100644
 From 7bbc2bfa514737b96e684a31f38257f042d5a3aa Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 7 Oct 2018 00:03:06 +0000
-Subject: [PATCH 106/123] Automatic date update in version.in
+Subject: [PATCH 106/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6336,7 +6336,7 @@ index 6f23cf002e..16b136f52d 100644
 From b2eed88f0919cb211c55e934afc54ad9fb63ebb1 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 8 Oct 2018 00:01:48 +0000
-Subject: [PATCH 107/123] Automatic date update in version.in
+Subject: [PATCH 107/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6362,7 +6362,7 @@ index 16b136f52d..7eac8078f2 100644
 From 21289e98003c96b1c3e7ebe345aefd72cc2ced70 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 9 Oct 2018 00:02:36 +0000
-Subject: [PATCH 108/123] Automatic date update in version.in
+Subject: [PATCH 108/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6388,7 +6388,7 @@ index 7eac8078f2..370bb05604 100644
 From 6658a44822a46157af5cc79a9e089657216b6c8f Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 10 Oct 2018 00:02:00 +0000
-Subject: [PATCH 109/123] Automatic date update in version.in
+Subject: [PATCH 109/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6414,7 +6414,7 @@ index 370bb05604..6b37244854 100644
 From 95b6baaf2f21d4a984adb1c6581662b1048c9cfd Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 11 Oct 2018 00:02:21 +0000
-Subject: [PATCH 110/123] Automatic date update in version.in
+Subject: [PATCH 110/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6440,7 +6440,7 @@ index 6b37244854..c35938c68d 100644
 From 07c577ad5b2b9a99b9fb5686bf70e7626f2c4361 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 12 Oct 2018 00:01:46 +0000
-Subject: [PATCH 111/123] Automatic date update in version.in
+Subject: [PATCH 111/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6466,7 +6466,7 @@ index c35938c68d..63759eb43b 100644
 From bb04ad1c01acc03e35e2ef2c4224cbd8d28fd3a1 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 13 Oct 2018 00:02:11 +0000
-Subject: [PATCH 112/123] Automatic date update in version.in
+Subject: [PATCH 112/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6492,7 +6492,7 @@ index 63759eb43b..dd6b05cdb5 100644
 From cf6b37b95e84f1603bda9e0bd44fc98b072e8cb4 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 14 Oct 2018 00:02:59 +0000
-Subject: [PATCH 113/123] Automatic date update in version.in
+Subject: [PATCH 113/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6518,7 +6518,7 @@ index dd6b05cdb5..dac016d7eb 100644
 From cde39bbce758cc98402a2642769ece50314fb52c Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Mon, 15 Oct 2018 00:01:53 +0000
-Subject: [PATCH 114/123] Automatic date update in version.in
+Subject: [PATCH 114/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6544,7 +6544,7 @@ index dac016d7eb..8d2ba3b66d 100644
 From a3ef5adbce025d2f2947133faec4cdc85e1e845f Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Tue, 16 Oct 2018 00:02:44 +0000
-Subject: [PATCH 115/123] Automatic date update in version.in
+Subject: [PATCH 115/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6570,7 +6570,7 @@ index 8d2ba3b66d..71c63c55e5 100644
 From da87a761d7071c25a382559b483a59f1fa539111 Mon Sep 17 00:00:00 2001
 From: Matthew Malcomson <matthew.malcomson@arm.com>
 Date: Tue, 16 Oct 2018 18:49:36 +0100
-Subject: [PATCH 116/123] AArch64: Fix error checking for SIMD udot (by
+Subject: [PATCH 116/128] AArch64: Fix error checking for SIMD udot (by
  element)
 
 Committed on behalf of Matthew Malcomson:
@@ -6717,7 +6717,7 @@ index ba2af7bfc2..e59240c98d 100644
 From bcca6d0e29f6951b783c6e19e6f305f9b166e322 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Wed, 17 Oct 2018 00:02:40 +0000
-Subject: [PATCH 117/123] Automatic date update in version.in
+Subject: [PATCH 117/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6743,7 +6743,7 @@ index 71c63c55e5..2959dda97c 100644
 From 32db9c46eb4292f94fb74f15724b40ce1a47eda4 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Thu, 18 Oct 2018 00:02:44 +0000
-Subject: [PATCH 118/123] Automatic date update in version.in
+Subject: [PATCH 118/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6769,7 +6769,7 @@ index 2959dda97c..4011fe4ee1 100644
 From 2792d3ed196ae6dd2b058956b24eb27caa1eb886 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Fri, 19 Oct 2018 00:02:09 +0000
-Subject: [PATCH 119/123] Automatic date update in version.in
+Subject: [PATCH 119/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -6795,7 +6795,7 @@ index 4011fe4ee1..0a41d0a603 100644
 From f9369f95fb2dbeea186b0cafb27775b92fced4b9 Mon Sep 17 00:00:00 2001
 From: Tamar Christina <tamar.christina@arm.com>
 Date: Fri, 19 Oct 2018 10:31:42 +0100
-Subject: [PATCH 120/123] Arm: Fix disassembler crashing on -b binary when
+Subject: [PATCH 120/128] Arm: Fix disassembler crashing on -b binary when
  thumb file and thumb not forced.
 
 The disassembler for Arm has some aborts in it in places it assumes can never
@@ -6940,7 +6940,7 @@ index b6cccc5233..bc97bc2617 100644
 From fa6e5eabf907e4d134a9c1ce37ed06459d79eb93 Mon Sep 17 00:00:00 2001
 From: Tamar Christina <tamar.christina@arm.com>
 Date: Fri, 19 Oct 2018 16:18:37 +0100
-Subject: [PATCH 121/123] Arm: Skip new binary decode tests on pe targets
+Subject: [PATCH 121/128] Arm: Skip new binary decode tests on pe targets
 
 The two new test I added require the use of the ".inst" directive which the PE
 targets don't support.  Because of that I excluded *-unknown-pe but the mask needs
@@ -7000,7 +7000,7 @@ index cee74e0651..a5b4159f1e 100644
 From 433dce2f38ae628e5c08f7d64b5739420c174ce4 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sat, 20 Oct 2018 00:02:13 +0000
-Subject: [PATCH 122/123] Automatic date update in version.in
+Subject: [PATCH 122/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -7026,7 +7026,7 @@ index 0a41d0a603..a9511f609f 100644
 From 72b323044822e93e3e1182b9b56348e41874c3e7 Mon Sep 17 00:00:00 2001
 From: GDB Administrator <gdbadmin@sourceware.org>
 Date: Sun, 21 Oct 2018 00:02:51 +0000
-Subject: [PATCH 123/123] Automatic date update in version.in
+Subject: [PATCH 123/128] Automatic date update in version.in
 
 ---
  bfd/version.h | 2 +-
@@ -7042,6 +7042,136 @@ index a9511f609f..37827ebf3d 100644
     sonames.  */
 -#define BFD_VERSION_DATE 20181020
 +#define BFD_VERSION_DATE 20181021
+ #define BFD_VERSION @bfd_version@
+ #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
+ #define REPORT_BUGS_TO @report_bugs_to@
+-- 
+2.18.0
+
+
+From ab59653f4864d5bb74585b5e33c5e2a34d8ff341 Mon Sep 17 00:00:00 2001
+From: GDB Administrator <gdbadmin@sourceware.org>
+Date: Mon, 22 Oct 2018 00:02:37 +0000
+Subject: [PATCH 124/128] Automatic date update in version.in
+
+---
+ bfd/version.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bfd/version.h b/bfd/version.h
+index 37827ebf3d..3ad61d69e2 100644
+--- a/bfd/version.h
++++ b/bfd/version.h
+@@ -16,7 +16,7 @@
+ 
+    In releases, the date is not included in either version strings or
+    sonames.  */
+-#define BFD_VERSION_DATE 20181021
++#define BFD_VERSION_DATE 20181022
+ #define BFD_VERSION @bfd_version@
+ #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
+ #define REPORT_BUGS_TO @report_bugs_to@
+-- 
+2.18.0
+
+
+From a25d4d51bd1e25b532791997d7671df7478353cd Mon Sep 17 00:00:00 2001
+From: GDB Administrator <gdbadmin@sourceware.org>
+Date: Tue, 23 Oct 2018 00:02:46 +0000
+Subject: [PATCH 125/128] Automatic date update in version.in
+
+---
+ bfd/version.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bfd/version.h b/bfd/version.h
+index 3ad61d69e2..e468700d0d 100644
+--- a/bfd/version.h
++++ b/bfd/version.h
+@@ -16,7 +16,7 @@
+ 
+    In releases, the date is not included in either version strings or
+    sonames.  */
+-#define BFD_VERSION_DATE 20181022
++#define BFD_VERSION_DATE 20181023
+ #define BFD_VERSION @bfd_version@
+ #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
+ #define REPORT_BUGS_TO @report_bugs_to@
+-- 
+2.18.0
+
+
+From 99575d4a792a40bf8dbb8fa63fd0aa9aa228aa6a Mon Sep 17 00:00:00 2001
+From: GDB Administrator <gdbadmin@sourceware.org>
+Date: Wed, 24 Oct 2018 00:02:31 +0000
+Subject: [PATCH 126/128] Automatic date update in version.in
+
+---
+ bfd/version.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bfd/version.h b/bfd/version.h
+index e468700d0d..ee24b5fa61 100644
+--- a/bfd/version.h
++++ b/bfd/version.h
+@@ -16,7 +16,7 @@
+ 
+    In releases, the date is not included in either version strings or
+    sonames.  */
+-#define BFD_VERSION_DATE 20181023
++#define BFD_VERSION_DATE 20181024
+ #define BFD_VERSION @bfd_version@
+ #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
+ #define REPORT_BUGS_TO @report_bugs_to@
+-- 
+2.18.0
+
+
+From 232fe1c86ef14428aff3dd2ee46792cbc67505d8 Mon Sep 17 00:00:00 2001
+From: GDB Administrator <gdbadmin@sourceware.org>
+Date: Thu, 25 Oct 2018 00:02:50 +0000
+Subject: [PATCH 127/128] Automatic date update in version.in
+
+---
+ bfd/version.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bfd/version.h b/bfd/version.h
+index ee24b5fa61..7494c060fe 100644
+--- a/bfd/version.h
++++ b/bfd/version.h
+@@ -16,7 +16,7 @@
+ 
+    In releases, the date is not included in either version strings or
+    sonames.  */
+-#define BFD_VERSION_DATE 20181024
++#define BFD_VERSION_DATE 20181025
+ #define BFD_VERSION @bfd_version@
+ #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
+ #define REPORT_BUGS_TO @report_bugs_to@
+-- 
+2.18.0
+
+
+From 3a6b69144a8a3fdd070fa9911c15e2e2aac23887 Mon Sep 17 00:00:00 2001
+From: GDB Administrator <gdbadmin@sourceware.org>
+Date: Fri, 26 Oct 2018 00:02:16 +0000
+Subject: [PATCH 128/128] Automatic date update in version.in
+
+---
+ bfd/version.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bfd/version.h b/bfd/version.h
+index 7494c060fe..df202adb95 100644
+--- a/bfd/version.h
++++ b/bfd/version.h
+@@ -16,7 +16,7 @@
+ 
+    In releases, the date is not included in either version strings or
+    sonames.  */
+-#define BFD_VERSION_DATE 20181025
++#define BFD_VERSION_DATE 20181026
  #define BFD_VERSION @bfd_version@
  #define BFD_VERSION_STRING  @bfd_version_package@ @bfd_version_string@
  #define REPORT_BUGS_TO @report_bugs_to@

@@ -30,6 +30,7 @@ mipsel-linux-musl
 mipsel-linux-musln32
 mipsel-linux-musln32sf
 mipsel-linux-muslsf
+or1k-linux-musl
 powerpc-linux-musl
 powerpc-linux-muslsf
 powerpc64-linux-musl
