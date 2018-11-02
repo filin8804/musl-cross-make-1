@@ -11,12 +11,12 @@ KALE="${PATH}"
 
 mkdir -p ${LOGS} ${BINS}
 for t in $(cat ${LIST} | grep -v "#"); do
-    [ -d ${BINS}/${t}-${CSUF} ] || make install \
+    [ -d ${BINS}/${t}-${CSUF} ] || make -O install \
         TARGET=${t} OUTPUT=${BINS}/${t}-${CSUF} \
         -j$(nproc) 2>&1 | tee ${LOGS}/${t}-${CSUF}.log
     if [ -d ${BINS}/${t}-${CSUF} ]; then
         export PATH="${KALE}:${BINS}/${t}-${CSUF}/bin"
-        [ -d ${BINS}/${t}-${NSUF} ] || make install NATIVE=1 \
+        [ -d ${BINS}/${t}-${NSUF} ] || make -O install NATIVE=1 \
             TARGET=${t} CROSS_COMPILE=${t}- OUTPUT=${BINS}/${t}-${NSUF} \
             -j$(nproc) 2>&1 | tee ${LOGS}/${t}-${NSUF}.log
         export PATH="${KALE}"
