@@ -30,6 +30,7 @@ mipsel-linux-musl
 mipsel-linux-musln32
 mipsel-linux-musln32sf
 mipsel-linux-muslsf
+or1k-linux-musl
 powerpc-linux-musl
 powerpc-linux-muslsf
 powerpc64-linux-musl
@@ -45,3 +46,9 @@ sh4-linux-musl
 sh4eb-linux-musl
 x86_64-linux-musl
 x86_64-linux-muslx32
+
+#riscv32-linux-musl
+#riscv64-linux-musl
+
+#i686-w64-mingw32
+#x86_64-w64-mingw32
