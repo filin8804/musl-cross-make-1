@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HERE=$(dirname $(readlink -e ${0}))
+HERE=$(dirname $(readlink -f ${0}))
 
 LIST=${HERE}/triples.txt
 LOGS=${HERE}/../logs
