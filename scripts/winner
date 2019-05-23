@@ -229,8 +229,8 @@ get_tool ()
 
     # host
     if [ ! -d "${base}/${host}${csuf}" ]; then
-        curl -s ${musl}/${user}/${host}${csuf}.tgz             \
-            | tar &>/dev/null -C "${base}" -xzf -;
+        curl ${musl}/${user}/${host}${csuf}.tgz                \
+            | tar 2>/dev/null -C "${base}" -xzf -;
         (
             cd "${base}/${host}${csuf}/bin";
             find . -maxdepth 1 -type f | while read k; do
@@ -241,8 +241,8 @@ get_tool ()
 
     # build
     if [ ! -d "${base}/${user}${csuf}" ]; then
-        curl -s ${musl}/${user}/${user}${csuf}.tgz             \
-            | tar &>/dev/null -C "${base}" -xzf -;
+        curl ${musl}/${user}/${user}${csuf}.tgz                \
+            | tar 2>/dev/null -C "${base}" -xzf -;
     fi
 }
 
@@ -270,7 +270,7 @@ get_conf ()
 get_list ()
 {
     [ ! -f "${base}/${filt}" ] || return;
-    curl -so "${base}/${filt}" ${list};
+    curl -o "${base}/${filt}" ${list};
     sed -i "${base}/${filt}" -e '/mingw/d';
     #nano "${base}/${filt}";
 }
@@ -282,8 +282,8 @@ get_targ ()
     # targets (if different from build)
     cat "${base}/${filt}" | grep -v "#" | while read k; do
         if [ ! -d "${base}/${k}${csuf}" ]; then
-            curl -s ${musl}/${user}/${k}${csuf}.tgz            \
-                | tar &>/dev/null -C "${base}" -xzf -;
+            curl ${musl}/${user}/${k}${csuf}.tgz               \
+                | tar 2>/dev/null -C "${base}" -xzf -;
         fi
     done;
 }
