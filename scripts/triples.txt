@@ -1,5 +1,6 @@
-# Comment any out that you do not wish to build.
-
+# Comment out lines you do not wish to build.
+# Do not leave any blank lines in this file.
+#
 aarch64-linux-musl
 aarch64_be-linux-musl
 arm-linux-musleabi
@@ -48,6 +49,6 @@ sh4-linux-musl
 sh4eb-linux-musl
 x86_64-linux-musl
 x86_64-linux-muslx32
-
+#
 #i686-w64-mingw32
 #x86_64-w64-mingw32
