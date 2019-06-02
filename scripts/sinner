@@ -188,6 +188,9 @@ COMMON_CONFIG += CC="$(HOST)-gcc ${STAT}" CXX="$(HOST)-g++ ${STAT}" FC="$(HOST)-
 COMMON_CONFIG += CFLAGS="${FLAG}" CXXFLAGS="${FLAG}" FFLAGS="${FLAG}" LDFLAGS="-s ${STAT}"
 COMMON_CONFIG += --disable-nls --disable-bootstrap --build=__USER__ --host=__HOST__ --target=__TARG__
 
+GCC_CONFIG += --enable-threads=__THREADS__
+OVERRIDE = --enable-libquadmath --enable-libquadmath-support
+
 GCC_VER      = __GCC_VER__
 BINUTILS_VER = __BINUTILS_VER__
 MUSL_VER     = __MUSL_VER__
@@ -198,6 +201,13 @@ MINGW_VER    = __MINGW_VER__
 LINUX_VER    =
 EOF
 );
+
+## Thread Configuration
+#
+# By popular demand, both Win32 and POSIX thread models will are
+# supported. Edit this variable if you don't wish to build both.
+#
+tmod="posix"              # default: "win32 posix"
 
 #---------------------------------------------------------------
 # Subroutines.
@@ -241,7 +251,7 @@ get_list ()
     [ ! -f "${base}/${filt}" ] || return;
     curl -o "${base}/${filt}" ${list};
     sed -i "${base}/${filt}" -e '/mingw/d';
-#    nano "${base}/${filt}";
+    nano "${base}/${filt}";
 }
 
 # Download all necessary target toolchains.
@@ -263,10 +273,14 @@ get_targ ()
 #     The directory that should contain system headers does not
 #     exist: //mingw/include
 #
+# We use 'make clean' to ensure that the updated configuration
+# takes full effect (relevant to thread model settings).
+#
 run_make ()
 {
     cat "${base}/${filt}" | grep -v "#" | while read k; do
     for tget in ${@}; do        # command-line argument list
+    for t in ${tmod}; do        # thread model list
 
         mkdir -p "${huge}/${k}";
         mkdir -p "${logs}/${k}";
@@ -282,10 +296,12 @@ run_make ()
             -e "s@__GMP_VER__@${GMP_VER}@"                     \
             -e "s@__MPC_VER__@${MPC_VER}@"                     \
             -e "s@__MPFR_VER__@${MPFR_VER}@"                   \
-            -e "s@__MINGW_VER__@${MINGW_VER}@";
+            -e "s@__MINGW_VER__@${MINGW_VER}@"                 \
+                                                               \
+            -e "s@__THREADS__@${t}@";
 
-        if [ ! -d "${huge}/${k}/${tget}${csuf}" ]; then
-            PATH="${kale}:${base}/${k}${csuf}/bin:${PATH}"     \
+        if [ ! -d "${huge}/${k}/${tget}${csuf}-${t}" ]; then
+            PATH="${kale}:${base}/${k}${csuf}/bin:${base}/${tget}${csuf}/bin:${PATH}"     \
                                                                \
             CC="${k}-gcc"                                      \
             CXX="${k}-g++"                                     \
@@ -295,19 +311,15 @@ run_make ()
             CXX_FOR_BUILD="${user}-g++"                        \
             RANLIB_FOR_BUILD="${user}-ranlib"                  \
                                                                \
-            CC_FOR_TARGET="${user}-gcc"                        \
-            CXX_FOR_TARGET="${user}-g++"                       \
-            RANLIB_FOR_TARGET="${user}-ranlib"                 \
-                                                               \
-            make -ik -C "${base}/${sinn}" -O install           \
-                BUILD=${user}                                  \
+            make -ik -C "${base}/${sinn}" -O clean install     \
                 HOST=${k}                                      \
                 TARGET=${tget}                                 \
-                OUTPUT="${huge}/${k}/${tget}${csuf}"           \
-                -j$(nproc) 2>&1                                \
-                    | tee "${logs}/${k}/${tget}${csuf}.log";
+                OUTPUT="${huge}/${k}/${tget}${csuf}-${t}"      \
+                -j$(nproc) 2>&1 | tee                          \
+                    "${logs}/${k}/${tget}${csuf}-${t}.log";
         fi
 
+    done;                       # thread model list
     done;                       # command-line argument list
     done;                       # source list (hosts)
 }
@@ -318,17 +330,19 @@ run_pack ()
 {
     cat "${base}/${filt}" | grep -v "#" | while read k; do
     for tget in ${@}; do        # command-line argument list
+    for t in ${tmod}; do        # thread model list
 
         mkdir -p "${zips}/${k}";
 
-        if [ ! -e "${zips}/${k}/${tget}${csuf}.tgz" ]; then
-            (
-                cd "${huge}/${k}";
-                tar -pczf "${zips}/${k}/${tget}${csuf}.tgz"    \
-                    ${tget}${csuf};
-            )
+        if [ ! -e "${zips}/${k}/${tget}${csuf}-${t}.tgz" ]; then
+        (
+            cd "${huge}/${k}";
+            tar -pczf "${zips}/${k}/${tget}${csuf}-${t}.tgz"   \
+                ${tget}${csuf}-${t};
+        )
         fi
 
+    done;                       # thread model list
     done;                       # command-line argument list
     done;                       # source list (hosts)
 }
