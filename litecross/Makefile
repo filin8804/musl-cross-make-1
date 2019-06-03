@@ -83,7 +83,7 @@ FULL_GCC_CONFIG = --enable-languages=c,c++,fortran \
 	--disable-libmpx \
 	--enable-deterministic-archives \
 	--enable-libstdcxx-time \
-	--disable-libquadmath --disable-libquadmath-support \
+	--enable-libquadmath --enable-libquadmath-support \
 	--disable-decimal-float \
         $(OVERRIDE)
 
