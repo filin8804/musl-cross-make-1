@@ -1,5 +1,5 @@
 diff --git a/gcc/config/s390/linux.h b/gcc/config/s390/linux.h
-index 739df00f62d..ccd48ee7b84 100644
+index 525c17c2c9f..2d4f4a0654e 100644
 --- a/gcc/config/s390/linux.h
 +++ b/gcc/config/s390/linux.h
 @@ -76,6 +76,9 @@ along with GCC; see the file COPYING3.  If not see

@@ -1,5 +1,5 @@
 diff --git a/gcc/config/m68k/linux.h b/gcc/config/m68k/linux.h
-index c6e005604d4..868c9cc3265 100644
+index f584d19e179..a3c215550fe 100644
 --- a/gcc/config/m68k/linux.h
 +++ b/gcc/config/m68k/linux.h
 @@ -73,6 +73,9 @@ along with GCC; see the file COPYING3.  If not see
@@ -13,7 +13,7 @@ index c6e005604d4..868c9cc3265 100644
  #define LINK_SPEC "-m m68kelf %{shared} \
    %{!shared: \
 diff --git a/libgcc/config/m68k/linux-unwind.h b/libgcc/config/m68k/linux-unwind.h
-index 9ea39d454aa..ecab17d3ee7 100644
+index 395e4b3212a..432b757541c 100644
 --- a/libgcc/config/m68k/linux-unwind.h
 +++ b/libgcc/config/m68k/linux-unwind.h
 @@ -37,7 +37,7 @@ struct uw_ucontext {

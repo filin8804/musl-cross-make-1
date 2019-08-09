@@ -13,7 +13,7 @@ index a9a0144185a..a19101aac54 100644
 +	echo 'set BUILD_CC "$(CC)"' > $@.tmp
 +	mv $@.tmp $@
 diff --git a/libitm/testsuite/Makefile.in b/libitm/testsuite/Makefile.in
-index eb9e992279d..1250e7f9a5a 100644
+index 34dcdd2dae0..458932c315d 100644
 --- a/libitm/testsuite/Makefile.in
 +++ b/libitm/testsuite/Makefile.in
 @@ -234,6 +234,7 @@ _RUNTEST = $(shell if test -f $(top_srcdir)/../dejagnu/runtest; then \
@@ -36,10 +36,10 @@ index eb9e992279d..1250e7f9a5a 100644
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
 diff --git a/libitm/testsuite/lib/libitm.exp b/libitm/testsuite/lib/libitm.exp
-index 041629687f6..748f492c03d 100644
+index b3c7eb94f94..5f06cb6c50e 100644
 --- a/libitm/testsuite/lib/libitm.exp
 +++ b/libitm/testsuite/lib/libitm.exp
-@@ -74,6 +74,7 @@ proc libitm_init { args } {
+@@ -75,6 +75,7 @@ proc libitm_init { args } {
      global ALWAYS_CFLAGS
      global CFLAGS
      global TOOL_EXECUTABLE TOOL_OPTIONS
@@ -47,7 +47,7 @@ index 041629687f6..748f492c03d 100644
      global GCC_UNDER_TEST
      global TESTING_IN_BUILD_TREE
      global target_triplet
-@@ -89,6 +90,8 @@ proc libitm_init { args } {
+@@ -90,6 +91,8 @@ proc libitm_init { args } {
      if ![info exists GCC_UNDER_TEST] then {
  	if [info exists TOOL_EXECUTABLE] {
  	    set GCC_UNDER_TEST $TOOL_EXECUTABLE

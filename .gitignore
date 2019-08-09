@@ -9,4 +9,5 @@
 /mpfr-*/
 /build-*/
 /linux-*/
-/logs/
+/isl-*/
+/build/

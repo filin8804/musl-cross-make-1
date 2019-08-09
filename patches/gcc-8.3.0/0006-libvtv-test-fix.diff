@@ -13,10 +13,10 @@ index a9a0144185a..a19101aac54 100644
 +	echo 'set BUILD_CC "$(CC)"' > $@.tmp
 +	mv $@.tmp $@
 diff --git a/libvtv/testsuite/Makefile.in b/libvtv/testsuite/Makefile.in
-index b5dfd29973c..9f672e9ae98 100644
+index f6314708e9f..cd281ac1ff7 100644
 --- a/libvtv/testsuite/Makefile.in
 +++ b/libvtv/testsuite/Makefile.in
-@@ -228,6 +228,7 @@ _RUNTEST = $(shell if test -f $(top_srcdir)/../dejagnu/runtest; then \
+@@ -229,6 +229,7 @@ _RUNTEST = $(shell if test -f $(top_srcdir)/../dejagnu/runtest; then \
  	     echo $(top_srcdir)/../dejagnu/runtest; else echo runtest; fi)
  
  RUNTEST = "$(_RUNTEST) $(AM_RUNTESTFLAGS)"
@@ -24,7 +24,7 @@ index b5dfd29973c..9f672e9ae98 100644
  all: all-am
  
  .SUFFIXES:
-@@ -434,6 +435,10 @@ uninstall-am:
+@@ -435,6 +436,10 @@ uninstall-am:
  	uninstall uninstall-am
  
  
