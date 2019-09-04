@@ -112,13 +112,13 @@
 # will be harvested from a "donor" toolchain; these versions do
 # not necessarily correspond to what is built here (yet, TODO).
 #
-GCC_VER=9.1.0
+GCC_VER=9-20190831
 BINUTILS_VER=2.32
-MUSL_VER=git-a60b9e06861e56c0810bae0249b421e1758d281a
+MUSL_VER=git-6ad514e4e278f0c3b18eb2db1d45638c9af1c07f
 GMP_VER=6.1.2
 MPC_VER=1.1.0
 MPFR_VER=4.0.2
-LINUX_VER=4.19.44               # TODO: proper install, no rsync
+LINUX_VER=4.19.69               # TODO: proper install, no rsync
 
 ## Directories
 #
