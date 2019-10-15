@@ -164,8 +164,6 @@ prep ()
 # (no args) Builds production toolchains for mac.musl.cc
 musl ()
 {
-    [ ! -f "${bdsk}/._${tool}" ] || return 0;
-
     cd "${bdsk}";
 
     if [ ! -d "${tool}" ]; then
@@ -177,8 +175,6 @@ musl ()
     printf > config.mak "%s\n" "${conf}";
 
     PATH="${sdir}/bin:$PATH" ./scripts/buildmac;
-
-    touch "${bdsk}/._${tool}";
 }
 
 
