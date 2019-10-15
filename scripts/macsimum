@@ -71,7 +71,7 @@ V_CUT=8.31  ;
 # Production compiler configuration data (or use heredoc)
 
 tool=musl-cross-make;           # musl-cross-make repository
-conf=$(curl -s https://conf.musl.cc/mac_20190903_9-2-1.txt);
+conf=$(curl -s https://conf.musl.cc/mac_20191014_9-2-1.txt);
 
 
 #---------------------------------------------------------------
@@ -168,7 +168,10 @@ musl ()
 
     cd "${bdsk}";
 
-    git clone https://git.zv.io/toolchains/${tool}.git;
+    if [ ! -d "${tool}" ]; then
+        git clone https://git.zv.io/toolchains/${tool}.git;
+    fi
+
     cd ${tool};
 
     printf > config.mak "%s\n" "${conf}";
@@ -228,6 +231,7 @@ prep j 1 ${M_GNU}/coreutils/coreutils-${V_CUT}.tar.xz          \
     --enable-static                                            \
     CFLAGS="-I${sdir}/include"                                 \
     LDFLAGS="-L${sdir}/lib"                                    \
+    FORCE_UNSAFE_CONFIGURE=1                                   \
     ;
 
 prep j 1 ${M_GNU}/gcc/gcc-${V_GCC}/gcc-${V_GCC}.tar.xz         \
