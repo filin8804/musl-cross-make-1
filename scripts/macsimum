@@ -5,7 +5,7 @@
 # Purpose  : Builds Mac-to-Linux cross-compiler toolchains.
 # Authors  : Zach van Rijn <me@zv.io>
 # License  : MIT
-# Revision : 20190905
+# Revision : 20191014
 #===============================================================
 
 #---------------------------------------------------------------
