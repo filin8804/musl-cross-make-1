@@ -23,6 +23,12 @@ ifneq ($(filter x86_64%x32,$(TARGET)),)
 GCC_CONFIG_FOR_TARGET += --with-abi=x32
 endif
 
+ifneq ($(findstring microblaze,$(TARGET)),)
+# ICE in GCC; temporarily disable gfortran support.
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87438
+GCC_CONFIG_FOR_TARGET += --enable-languages=c,c++
+endif
+
 ifneq ($(findstring powerpc64,$(TARGET)),)
 GCC_CONFIG_FOR_TARGET += --with-abi=elfv2
 endif
@@ -48,14 +54,7 @@ GCC_CONFIG_FOR_TARGET += --with-float=hard
 endif
 
 ifneq ($(LIBTOOL),)
-
-ifeq  ($(LIBTOOL_STATIC),)
-LIBTOOL_STATIC = $(LIBTOOL)-static
-endif
-
-LIBTOOL_ARG        = LIBTOOL=$(LIBTOOL)
-LIBTOOL_STATIC_ARG = LIBTOOL=$(LIBTOOL_STATIC)
-
+LIBTOOL_ARG = LIBTOOL=$(LIBTOOL)
 endif
 
 MAKE += MULTILIB_OSDIRNAMES=
@@ -64,13 +63,15 @@ MAKE += ac_cv_prog_lex_root=lex.yy.c
 MAKE += MAKEINFO=false
 
 FULL_BINUTILS_CONFIG = \
+	--disable-separate-code \
 	$(COMMON_CONFIG) $(BINUTILS_CONFIG) $(TOOLCHAIN_CONFIG) \
 	--disable-werror \
 	--target=$(TARGET) --prefix= \
 	--libdir=/lib --disable-multilib \
-	--with-sysroot=$(SYSROOT)
+	--with-sysroot=$(SYSROOT) \
+	--enable-deterministic-archives
 
-FULL_GCC_CONFIG = --enable-languages=c,c++ \
+FULL_GCC_CONFIG = --enable-languages=c,c++,fortran \
 	$(GCC_CONFIG_FOR_TARGET) \
 	$(COMMON_CONFIG) $(GCC_CONFIG) $(TOOLCHAIN_CONFIG) \
 	--disable-werror \
@@ -82,7 +83,10 @@ FULL_GCC_CONFIG = --enable-languages=c,c++ \
 	--disable-gnu-indirect-function \
 	--disable-libmpx \
 	--enable-deterministic-archives \
-	--enable-libstdcxx-time
+	--enable-libstdcxx-time \
+	--enable-libquadmath --enable-libquadmath-support \
+	--disable-decimal-float \
+        $(OVERRIDE)
 
 FULL_MUSL_CONFIG = $(MUSL_CONFIG) \
 	--prefix= --host=$(TARGET)
@@ -207,26 +211,14 @@ obj_binutils/.lc_configured: | obj_binutils src_binutils
 	touch $@
 
 obj_binutils/.lc_built: | obj_binutils/.lc_configured
-	cd obj_binutils && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_STATIC_ARG)" all
+	cd obj_binutils && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_ARG)" all
 	touch $@
 
 obj_gcc/.lc_configured: | obj_gcc src_gcc
 	cd obj_gcc && ../src_gcc/configure $(FULL_GCC_CONFIG)
 	touch $@
 
-obj_gcc/.lc_gmp_built: | obj_gcc/.lc_configured
-	cd obj_gcc && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_STATIC_ARG)" all-gmp
-	touch $@
-
-obj_gcc/.lc_mpfr_built: | obj_gcc/.lc_gmp_built
-	cd obj_gcc && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_STATIC_ARG)" all-mpfr
-	touch $@
-
-obj_gcc/.lc_mpc_built: | obj_gcc/.lc_mpfr_built
-	cd obj_gcc && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_STATIC_ARG)" all-mpc
-	touch $@
-
-obj_gcc/gcc/.lc_built: | obj_gcc/.lc_mpc_built
+obj_gcc/gcc/.lc_built: | obj_gcc/.lc_configured
 	cd obj_gcc && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_ARG)" all-gcc
 	touch $@
 
@@ -257,7 +249,7 @@ install-musl: | obj_musl/.lc_built
 	cd obj_musl && $(MAKE) $(MUSL_VARS) DESTDIR=$(DESTDIR)$(OUTPUT)$(SYSROOT) install
 
 install-binutils: | obj_binutils/.lc_built
-	cd obj_binutils && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_STATIC_ARG)" DESTDIR=$(DESTDIR)$(OUTPUT) install
+	cd obj_binutils && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_ARG)" DESTDIR=$(DESTDIR)$(OUTPUT) install
 
 install-gcc: | obj_gcc/.lc_built
 	cd obj_gcc && $(MAKE) MAKE="$(MAKE) $(LIBTOOL_ARG)" DESTDIR=$(DESTDIR)$(OUTPUT) install
@@ -265,7 +257,7 @@ install-gcc: | obj_gcc/.lc_built
 
 ifneq ($(LINUX_SRCDIR),)
 TARGET_ARCH = $(firstword $(subst -, ,$(TARGET)))
-TARGET_ARCH_MANGLED = $(patsubst i%86,x86,$(patsubst aarch64%,arm64%,$(TARGET_ARCH)))
+TARGET_ARCH_MANGLED = $(patsubst i%86,x86,$(patsubst aarch64%,arm64%,$(patsubst or1k%,openrisc%,$(TARGET_ARCH))))
 LINUX_ARCH_LIST = $(sort $(notdir $(wildcard $(LINUX_SRCDIR)/arch/*)))
 LINUX_ARCH = $(lastword $(foreach a,$(LINUX_ARCH_LIST),$(if $(filter $(a)%,$(TARGET_ARCH_MANGLED)),$(a))))
 ifneq ($(LINUX_ARCH),)

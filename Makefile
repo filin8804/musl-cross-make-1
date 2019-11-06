@@ -1,29 +1,34 @@
-
 SOURCES = sources
 
 CONFIG_SUB_REV = 3d5db9ebe860
-BINUTILS_VER = 2.27
-GCC_VER = 6.4.0
-MUSL_VER = 1.1.20
-GMP_VER = 6.1.1
-MPC_VER = 1.0.3
-MPFR_VER = 3.1.4
+BINUTILS_VER = 2.32
+GCC_VER = 8.3.0
+MUSL_VER = 1.1.22
+GMP_VER = 6.1.2
+MPC_VER = 1.1.0
+MPFR_VER = 4.0.2
 LINUX_VER = 4.4.10
 
 GNU_SITE = https://ftp.gnu.org/pub/gnu
-GCC_SITE = $(GNU_SITE)/gcc
+
 BINUTILS_SITE = $(GNU_SITE)/binutils
 GMP_SITE = $(GNU_SITE)/gmp
 MPC_SITE = $(GNU_SITE)/mpc
 MPFR_SITE = $(GNU_SITE)/mpfr
+
+
+GCC_SITE = $(GNU_SITE)/gcc
+GCC_SNAP = https://sourceware.org/pub/gcc/snapshots
+
 ISL_SITE = http://isl.gforge.inria.fr/
 
 MUSL_SITE = https://www.musl-libc.org/releases
 MUSL_REPO = git://git.musl-libc.org/musl
+MUSL_RISC = https://github.com/riscv/riscv-musl
 
 LINUX_SITE = https://cdn.kernel.org/pub/linux/kernel
 
-DL_CMD = wget -c -O
+DL_CMD = curl -so
 
 HOST = $(if $(NATIVE),$(TARGET))
 BUILD_DIR = build/$(if $(HOST),$(HOST),local)/$(TARGET)
@@ -59,7 +64,8 @@ $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/mpc*)): SITE = $(MPC_SIT
 $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/mpfr*)): SITE = $(MPFR_SITE)
 $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/isl*)): SITE = $(ISL_SITE)
 $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/binutils*)): SITE = $(BINUTILS_SITE)
-$(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/gcc*)): SITE = $(GCC_SITE)/$(basename $(basename $(notdir $@)))
+$(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/gcc-*)): SITE = $(GCC_SITE)/$(basename $(basename $(notdir $@)))
+$(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/gcc-*-*)): SITE = $(GCC_SNAP)/$(subst gcc-,,$(basename $(basename $(notdir $@))))
 $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/musl*)): SITE = $(MUSL_SITE)
 $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/linux-4*)): SITE = $(LINUX_SITE)/v4.x
 $(patsubst hashes/%.sha1,$(SOURCES)/%,$(wildcard hashes/linux-3*)): SITE = $(LINUX_SITE)/v3.x
@@ -70,7 +76,7 @@ $(SOURCES):
 
 $(SOURCES)/config.sub: | $(SOURCES)
 	mkdir -p $@.tmp
-	cd $@.tmp && $(DL_CMD) $(notdir $@) "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=$(CONFIG_SUB_REV)"
+	cd $@.tmp && $(DL_CMD) $(notdir $@) "https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=$(CONFIG_SUB_REV)"
 	cd $@.tmp && touch $(notdir $@)
 	cd $@.tmp && sha1sum -c $(CURDIR)/hashes/$(notdir $@).$(CONFIG_SUB_REV).sha1
 	mv $@.tmp/$(notdir $@) $@
@@ -86,19 +92,26 @@ $(SOURCES)/%: hashes/%.sha1 | $(SOURCES)
 
 endif
 
-
 # Rules for extracting and patching sources, or checking them out from git.
 
 musl-git-%:
 	rm -rf $@.tmp
-	git clone -b $(patsubst musl-git-%,%,$@) $(MUSL_REPO) $@.tmp
-	cd $@.tmp && git fsck
+	git clone $(MUSL_REPO) $@.tmp
+	cd $@.tmp && git reset --hard $(patsubst musl-git-%,%,$@) && git fsck
+	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp && patch -p1 )
+	mv $@.tmp $@
+
+musl-riscv-%:
+	rm -rf $@.tmp
+	git clone $(MUSL_RISC) $@.tmp
+	cd $@.tmp && git reset --hard $(patsubst musl-riscv-%,%,$@) && git fsck
+	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp && patch -p1 )
 	mv $@.tmp $@
 
 %: $(SOURCES)/%.tar.gz | $(SOURCES)/config.sub
 	rm -rf $@.tmp
 	mkdir $@.tmp
-	( cd $@.tmp && tar zxvf - ) < $<
+	( cd $@.tmp && tar zxf - ) < $<
 	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp/$@ && patch -p1 )
 	test ! -f $@.tmp/$@/config.sub || cp -f $(SOURCES)/config.sub $@.tmp/$@
 	rm -rf $@
@@ -109,7 +122,7 @@ musl-git-%:
 %: $(SOURCES)/%.tar.bz2 | $(SOURCES)/config.sub
 	rm -rf $@.tmp
 	mkdir $@.tmp
-	( cd $@.tmp && tar jxvf - ) < $<
+	( cd $@.tmp && tar jxf - ) < $<
 	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp/$@ && patch -p1 )
 	test ! -f $@.tmp/$@/config.sub || cp -f $(SOURCES)/config.sub $@.tmp/$@
 	rm -rf $@
@@ -120,7 +133,7 @@ musl-git-%:
 %: $(SOURCES)/%.tar.xz | $(SOURCES)/config.sub
 	rm -rf $@.tmp
 	mkdir $@.tmp
-	( cd $@.tmp && tar Jxvf - ) < $<
+	( cd $@.tmp && tar Jxf - ) < $<
 	test ! -d patches/$@ || cat patches/$@/* | ( cd $@.tmp/$@ && patch -p1 )
 	test ! -f $@.tmp/$@/config.sub || cp -f $(SOURCES)/config.sub $@.tmp/$@
 	rm -rf $@
